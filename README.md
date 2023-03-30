@@ -288,7 +288,8 @@ void assert_failed(uint8_t *file, uint32_t line)
 #endif /* USE_FULL_ASSERT */
 ```
 ## Output  :
-
+![a](https://user-images.githubusercontent.com/119407186/228782179-649c46a3-c356-4795-90d3-685d9092486a.jpg)
+![b](https://user-images.githubusercontent.com/119407186/228782219-2cf7e6d2-4481-4e5f-877b-679f89df3e13.jpg)
 ## Result :
 Interfacing a digital output with ARM microcontroller is executed and the results are verified.
 
