@@ -129,7 +129,7 @@ The main features of LPC2148 include the following.
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-void LEDBLINK();
+void LEDONOFF();
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -176,7 +176,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  LEDBLINK();
+	  LEDONOFF();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -186,12 +186,13 @@ int main(void)
   * @brief System Clock Configuration
   * @retval None
   */
-void LEDBLINK()
+
+void LEDONOFF()
 {
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-	HAL_Delay(1000);
+	HAL_Delay(100);
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-	HAL_Delay(1000);
+	HAL_Delay(100);
 }
 void SystemClock_Config(void)
 {
@@ -286,6 +287,8 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
+
 ```
 ## Output  :
 ![a](https://user-images.githubusercontent.com/119407186/228782179-649c46a3-c356-4795-90d3-685d9092486a.jpg)
